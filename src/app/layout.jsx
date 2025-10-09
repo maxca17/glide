@@ -4,8 +4,8 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Radiant',
-    default: 'Radiant - Close every deal',
+    template: '%s - Glide',
+    default: 'Glide - CPA-Vetted Accounting Talent',
   },
 }
 
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="The Radiant Blog"
+          title="The Glide Blog"
           href="/blog/feed.xml"
         />
       </head>
