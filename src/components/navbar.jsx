@@ -15,7 +15,7 @@ const links = [
   { href: '#how-it-works', label: 'How it Works' },
   { href: '#services', label: 'Services' },
   { href: '/company', label: 'Company' },
-  { href: '#', label: 'Apply as Talent' },
+  { href: '/apply', label: 'Apply as Talent' },
   { href: '#', label: 'Get Talent Now' },
   { href: '/login', label: 'Login' },
 ]

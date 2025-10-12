@@ -18,7 +18,12 @@ import { Screenshot } from '@/components/screenshot'
 import { Testimonials } from '@/components/testimonials'
 import { Heading, Subheading } from '@/components/text'
 import { ChevronRightIcon } from '@heroicons/react/16/solid'
+import { CheckIcon } from '@heroicons/react/20/solid'
 import { motion } from 'framer-motion'
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
 
 function Hero() {
   const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 })
@@ -99,9 +104,9 @@ function FeatureSection() {
           transition={{ duration: 0.6 }}
         >
           <Subheading>Our Services</Subheading>
-          <Heading as="h2" className="mt-2 max-w-3xl text-3xl sm:text-4xl md:text-5xl">
-            We Handle the Work That Keeps You From Growing
-        </Heading>
+          <Heading as="h2" className="mt-2 max-w-5xl bg-gradient-to-r from-gray-900 via-[#c77d6a] to-gray-900 bg-clip-text text-transparent pb-2">
+            We Solve the Capacity Problem Holding Firms Back.
+          </Heading>
         </motion.div>
         <dl className="mt-16 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
           <motion.div 
@@ -186,6 +191,115 @@ function FeatureSection() {
   )
 }
 
+function SpecializationSection() {
+  const specializations = [
+    {
+      title: 'Core Accounting Operations',
+      description: 'Essential day-to-day accounting tasks to keep your books accurate and up-to-date.',
+      items: [
+        'Month-End Close Prep',
+        'Reconciliation Support',
+        'AP / AR Management',
+        'Fixed Assets Management',
+        'Expense Management',
+        'Inventory Management',
+        'Accruals and Provisions Management',
+      ],
+    },
+    {
+      title: 'Tax Preparation Support',
+      description: 'Comprehensive tax prep assistance to streamline your filing process.',
+      items: [
+        'Pre-Tax Filing Checks',
+        'Tax Return Data Entry',
+        'Trial Balance Mapping',
+        'Depreciation Schedule Prep',
+        'Book-Tax Difference Schedule Prep',
+        'Carryforward / Basis Tie-Out',
+        'Allocation / Apportionment Workpapers',
+      ],
+    },
+    {
+      title: 'Cleanup Support',
+      description: 'Get your books back on track with expert cleanup and remediation services.',
+      items: [
+        'Bookkeeping Cleanup',
+        'Vendor Master Data Cleanup',
+        'Uncategorized Transaction Review',
+        'AP / AR Aging Cleanup',
+      ],
+    },
+    {
+      title: 'Compliance Support',
+      description: 'Stay compliant with regulatory requirements and audit readiness.',
+      items: [
+        '1099 Prep & W-9 Collection',
+        'Sales Tax',
+        'Audit PBC Support',
+      ],
+    },
+  ]
+
+  return (
+    <div className="bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32">
+      <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
+        <div
+          style={{
+            clipPath:
+              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+          }}
+          className="mx-auto aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+        />
+      </div>
+      
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <Subheading>Areas of Expertise</Subheading>
+          <Heading as="h2" className="mt-2 max-w-5xl bg-gradient-to-r from-gray-900 via-[#c77d6a] to-gray-900 bg-clip-text text-transparent pb-2">
+            Where Our Talent Specializes
+          </Heading>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl">
+            From month-end close to complex tax prep, our CPA-vetted accountants deliver precision support across the full accounting lifecycle.
+          </p>
+        </motion.div>
+
+        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {specializations.map((spec, index) => (
+            <motion.div
+              key={spec.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="relative bg-white rounded-3xl p-8 shadow-xl ring-1 ring-gray-900/10 hover:shadow-2xl transition-shadow duration-300"
+            >
+              <h3 className="text-lg font-semibold text-[#f7a1c4]">
+                {spec.title}
+              </h3>
+              <p className="mt-4 text-base text-gray-600">
+                {spec.description}
+              </p>
+              <ul className="mt-8 space-y-3">
+                {spec.items.map((item) => (
+                  <li key={item} className="flex gap-x-3 text-sm text-gray-600">
+                    <CheckIcon className="h-6 w-5 flex-none text-[#f7a1c4]" aria-hidden="true" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </Container>
+    </div>
+  )
+}
+
 function BentoSection() {
   return (
     <Container id="how-it-works">
@@ -196,81 +310,84 @@ function BentoSection() {
         transition={{ duration: 0.6 }}
       >
         <Subheading>How It Works</Subheading>
-        <Heading as="h3" className="mt-2 max-w-3xl">
+        <Heading as="h2" className="mt-2 max-w-5xl bg-gradient-to-r from-gray-900 via-[#c77d6a] to-gray-900 bg-clip-text text-transparent pb-2">
           Quality Talent, Without The Hiring Drag
         </Heading>
       </motion.div>
 
-      <dl className="mt-16 grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+      <div className="mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-4">
         <motion.div 
-          className="relative pl-12"
+          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <dt className="text-base font-semibold leading-7 text-gray-950">
-            <div className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#f7a1c4] to-[#c77d6a] shadow-sm">
-              <span className="text-sm font-bold text-white">1</span>
-            </div>
-            Step 1: Tell Us What You're Looking For
-          </dt>
-          <dd className="mt-2 text-sm leading-6 text-gray-600">
-            Fill out a quick form with what you need — we'll handle the rest and find your perfect CPA-vetted accounting match.
-          </dd>
+          <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">1</p>
+          <div className="mt-8">
+            <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
+              Tell Us What You're Looking For
+            </p>
+            <p className="mt-2 text-base/7 text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+              Fill out a quick form with what you need — we'll handle the rest and find your perfect CPA-vetted accounting match.
+            </p>
+          </div>
         </motion.div>
+
         <motion.div 
-          className="relative pl-12"
+          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <dt className="text-base font-semibold leading-7 text-gray-950">
-            <div className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#f7a1c4] to-[#c77d6a] shadow-sm">
-              <span className="text-sm font-bold text-white">2</span>
-            </div>
-            Step 2: Get Matched to the Right Talent
-          </dt>
-          <dd className="mt-2 text-sm leading-6 text-gray-600">
-            We'll find your perfect matches before your coffee gets cold. You'll get a shortlist of options, each with availability that fits your timeline.
-          </dd>
+          <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">2</p>
+          <div className="mt-8">
+            <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
+              Get Matched to the Right Talent
+            </p>
+            <p className="mt-2 text-base/7 text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+              We'll find your perfect matches before your coffee gets cold. You'll get a shortlist of options, each with availability that fits your timeline.
+            </p>
+          </div>
         </motion.div>
+
         <motion.div 
-          className="relative pl-12"
+          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <dt className="text-base font-semibold leading-7 text-gray-950">
-            <div className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#f7a1c4] to-[#c77d6a] shadow-sm">
-              <span className="text-sm font-bold text-white">3</span>
-            </div>
-            Step 3: Meet Before You Commit
-          </dt>
-          <dd className="mt-2 text-sm leading-6 text-gray-600">
-            Review your shortlist, connect with top candidates, and join quick virtual intros to confirm the perfect fit.
-          </dd>
+          <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">3</p>
+          <div className="mt-8">
+            <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
+              Meet Before You Commit
+            </p>
+            <p className="mt-2 text-base/7 text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+              Review your shortlist, connect with top candidates, and join quick virtual intros to confirm the perfect fit.
+            </p>
+          </div>
         </motion.div>
+
         <motion.div 
-          className="relative pl-12"
+          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <dt className="text-base font-semibold leading-7 text-gray-950">
-            <div className="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#f7a1c4] to-[#c77d6a] shadow-sm">
-              <span className="text-sm font-bold text-white">4</span>
-            </div>
-            Step 4: Engagement Launch
-          </dt>
-          <dd className="mt-2 text-sm leading-6 text-gray-600">
-            Once you've chosen your hire, we finalize the SOW, handle onboarding, and coordinate your start date. From kickoff to delivery, we stay close to ensure smooth execution and consistent quality.
-          </dd>
+          <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">4</p>
+          <div className="mt-8">
+            <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
+              Engagement Launch
+            </p>
+            <p className="mt-2 text-base/7 text-gray-600 group-hover:text-gray-300 transition-colors duration-500">
+              Once you've chosen your hire, we finalize the SOW, handle onboarding, and coordinate your start date. From kickoff to delivery, we stay close to ensure smooth execution and consistent quality.
+            </p>
+          </div>
         </motion.div>
-      </dl>
+      </div>
     </Container>
   )
 }
@@ -460,6 +577,7 @@ export default function Home() {
         </motion.div>
         <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
           <FeatureSection />
+          <SpecializationSection />
           <BentoSection />
         </div>
         <DarkBentoSection />

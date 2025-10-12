@@ -72,7 +72,7 @@ function Stats() {
         >
           <dt className="text-sm font-medium text-gray-600">Family Legacy</dt>
           <dd className="order-first text-6xl font-medium tracking-tight bg-gradient-to-r from-[#f7a1c4] to-[#c77d6a] bg-clip-text text-transparent">
-            <AnimatedNumber start={0} end={4} /> Gen
+            <AnimatedNumber start={0} end={3} />rd Gen
           </dd>
           <dd className="text-sm text-gray-600">40+ years of combined firm experience</dd>
         </motion.div>
