@@ -82,7 +82,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
           >
-            <Button href="#" className="sm:min-w-[200px]">Get Talent Now</Button>
+            <Button href="https://app.try-glide.com/customer-onboarding" className="sm:min-w-[200px]">Get Talent Now</Button>
             <Button variant="secondary" href="#why-glide" className="sm:min-w-[200px]">
               Why Glide
             </Button>
