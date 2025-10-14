@@ -15,9 +15,9 @@ const links = [
   { href: '#how-it-works', label: 'How it Works' },
   { href: '#services', label: 'Services' },
   { href: '/company', label: 'Company' },
-  { href: '/apply', label: 'Apply as Talent' },
-  { href: '#', label: 'Get Talent Now' },
-  { href: '/login', label: 'Login' },
+  { href: 'https://app.try-glide.com/talent-intake', label: 'Apply as Talent' },
+  { href: 'https://app.try-glide.com/customer-onboarding', label: 'Get Talent Now' },
+  { href: 'https://app.try-glide.com/login', label: 'Login' },
 ]
 
 function DesktopNav() {
