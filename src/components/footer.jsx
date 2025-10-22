@@ -50,33 +50,29 @@ function Sitemap() {
   return (
     <>
       <div>
-        <SitemapHeading>Product</SitemapHeading>
+        <SitemapHeading>Glide</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="#">Analysis</SitemapLink>
-          <SitemapLink href="#">API</SitemapLink>
+          <SitemapLink href="#services">Our Services</SitemapLink>
+          <SitemapLink href="#areas-of-expertise">Areas of Expertise</SitemapLink>
+          <SitemapLink href="#how-it-works">How It Works</SitemapLink>
+          <SitemapLink href="#why-glide">Why Glide</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Company</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Careers</SitemapLink>
-          <SitemapLink href="/blog">Blog</SitemapLink>
+          <SitemapLink href="/apply">Apply as Talent</SitemapLink>
+          <SitemapLink href="/">Get Talent</SitemapLink>
           <SitemapLink href="/company">Company</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Support</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="#">Help center</SitemapLink>
-          <SitemapLink href="#">Community</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Company</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Terms of service</SitemapLink>
-          <SitemapLink href="#">Privacy policy</SitemapLink>
+          <SitemapLink href="/talent-terms">Talent Terms</SitemapLink>
+          <SitemapLink href="/client-terms">Client Terms</SitemapLink>
+          <SitemapLink href="/privacy">Privacy Policy</SitemapLink>
+          <SitemapLink href="mailto:rohan@try-glide.com">Support</SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -115,14 +111,6 @@ function SocialLinks() {
   return (
     <>
       <Link
-        href="https://facebook.com"
-        target="_blank"
-        aria-label="Visit us on Facebook"
-        className="text-gray-950 data-hover:text-gray-950/75"
-      >
-        <SocialIconFacebook className="size-4" />
-      </Link>
-      <Link
         href="https://x.com"
         target="_blank"
         aria-label="Visit us on X"
@@ -131,7 +119,7 @@ function SocialLinks() {
         <SocialIconX className="size-4" />
       </Link>
       <Link
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/company/glideglobalinc/"
         target="_blank"
         aria-label="Visit us on LinkedIn"
         className="text-gray-950 data-hover:text-gray-950/75"
@@ -145,7 +133,7 @@ function SocialLinks() {
 function Copyright() {
   return (
     <div className="text-sm/6 text-gray-950">
-      &copy; {new Date().getFullYear()} Glide LLC.
+      &copy; {new Date().getFullYear()} Glide Global Inc.
     </div>
   )
 }

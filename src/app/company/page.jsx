@@ -205,7 +205,7 @@ function Leadership() {
             <div className="flex items-center gap-4">
               <img
                 alt="Max Calvert"
-                src="/team/michael-foster.jpg"
+                src="/team/max-calvert.jpg"
                 className="h-16 w-16 rounded-full object-cover ring-2 ring-gray-100"
               />
               <div>

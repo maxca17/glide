@@ -8,6 +8,7 @@ export function LogoCloud({ className }) {
     { alt: 'Golden Egg Media', src: '/logo-cloud/golden_egg_media_logo.jpeg', height: 'h-16' },
     { alt: 'Victrix', src: '/logo-cloud/logo-red-victrix.webp', height: 'h-10' },
     { alt: 'Prajapati', src: '/logo-cloud/prajapati-logo-2.png', height: 'h-10' },
+    { alt: 'Dream Ventures', src: '/logo-cloud/dream-logo.svg', height: 'h-12', isWhite: true },
   ]
 
   return (
@@ -19,25 +20,34 @@ export function LogoCloud({ className }) {
             key={`first-${index}`}
             alt={logo.alt}
             src={logo.src}
-            className={`${logo.height} w-auto object-contain grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-300 flex-shrink-0`}
+            className={`${logo.height} w-auto object-contain ${logo.isWhite ? 'opacity-40 hover:opacity-100' : 'grayscale opacity-40 hover:opacity-100 hover:grayscale-0'} transition-all duration-300 flex-shrink-0 ${logo.isWhite ? 'brightness-0 hover:brightness-100' : ''}`}
           />
         ))}
-        {/* Duplicate set for seamless loop */}
+        {/* Second set for seamless loop */}
         {logos.map((logo, index) => (
           <img
             key={`second-${index}`}
             alt={logo.alt}
             src={logo.src}
-            className={`${logo.height} w-auto object-contain grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-300 flex-shrink-0`}
+            className={`${logo.height} w-auto object-contain ${logo.isWhite ? 'opacity-40 hover:opacity-100' : 'grayscale opacity-40 hover:opacity-100 hover:grayscale-0'} transition-all duration-300 flex-shrink-0 ${logo.isWhite ? 'brightness-0 hover:brightness-100' : ''}`}
           />
         ))}
-        {/* Third set for extra smoothness */}
+        {/* Third set for extra coverage */}
         {logos.map((logo, index) => (
           <img
             key={`third-${index}`}
             alt={logo.alt}
             src={logo.src}
-            className={`${logo.height} w-auto object-contain grayscale opacity-40 hover:opacity-100 hover:grayscale-0 transition-all duration-300 flex-shrink-0`}
+            className={`${logo.height} w-auto object-contain ${logo.isWhite ? 'opacity-40 hover:opacity-100' : 'grayscale opacity-40 hover:opacity-100 hover:grayscale-0'} transition-all duration-300 flex-shrink-0 ${logo.isWhite ? 'brightness-0 hover:brightness-100' : ''}`}
+          />
+        ))}
+        {/* Fourth set for full coverage */}
+        {logos.map((logo, index) => (
+          <img
+            key={`fourth-${index}`}
+            alt={logo.alt}
+            src={logo.src}
+            className={`${logo.height} w-auto object-contain ${logo.isWhite ? 'opacity-40 hover:opacity-100' : 'grayscale opacity-40 hover:opacity-100 hover:grayscale-0'} transition-all duration-300 flex-shrink-0 ${logo.isWhite ? 'brightness-0 hover:brightness-100' : ''}`}
           />
         ))}
       </div>

@@ -194,29 +194,28 @@ function FeatureSection() {
 function SpecializationSection() {
   const specializations = [
     {
-      title: 'Core Accounting Operations',
+      title: 'Core Accounting and Finance Operations',
       description: 'Essential day-to-day accounting tasks to keep your books accurate and up-to-date.',
       items: [
-        'Month-End Close Prep',
+        'Month-End Closings',
         'Reconciliation Support',
-        'AP / AR Management',
-        'Fixed Assets Management',
+        'AR / AP Management',
+        'Inventory Support',
+        'Fixed Assets Register Management',
         'Expense Management',
-        'Inventory Management',
-        'Accruals and Provisions Management',
+        'Accruals Management',
       ],
     },
     {
       title: 'Tax Preparation Support',
       description: 'Comprehensive tax prep assistance to streamline your filing process.',
       items: [
-        'Pre-Tax Filing Checks',
         'Tax Return Data Entry',
         'Trial Balance Mapping',
-        'Depreciation Schedule Prep',
-        'Book-Tax Difference Schedule Prep',
-        'Carryforward / Basis Tie-Out',
-        'Allocation / Apportionment Workpapers',
+        'Tax Depreciation Management',
+        'Book versus Tax Differences Workpapers',
+        'Carry forward schedules',
+        'State / City Apportionment Workpapers',
       ],
     },
     {
@@ -224,24 +223,27 @@ function SpecializationSection() {
       description: 'Get your books back on track with expert cleanup and remediation services.',
       items: [
         'Bookkeeping Cleanup',
+        'AR / AP Cleanup',
+        'Customer Master Data Cleanup',
+        'Inventory Cleanup',
         'Vendor Master Data Cleanup',
         'Uncategorized Transaction Review',
-        'AP / AR Aging Cleanup',
       ],
     },
     {
       title: 'Compliance Support',
       description: 'Stay compliant with regulatory requirements and audit readiness.',
       items: [
-        '1099 Prep & W-9 Collection',
-        'Sales Tax',
-        'Audit PBC Support',
+        'Form 1099 Preparation',
+        'Form W-9, Form W-8-BEN and Form W-8-BEN-E Collection',
+        'Sales and Use Tax Preparation',
+        'Audit Support Services',
       ],
     },
   ]
 
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32">
+    <div className="bg-gradient-to-b from-white to-gray-50 py-24 sm:py-32" id="areas-of-expertise">
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
           style={{
@@ -317,14 +319,14 @@ function BentoSection() {
 
       <div className="mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-4">
         <motion.div 
-          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
+          className="group flex flex-col rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">1</p>
-          <div className="mt-8">
+          <div className="mt-8 flex-1">
             <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
               Tell Us What You're Looking For
             </p>
@@ -335,14 +337,14 @@ function BentoSection() {
         </motion.div>
 
         <motion.div 
-          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
+          className="group flex flex-col rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">2</p>
-          <div className="mt-8">
+          <div className="mt-8 flex-1">
             <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
               Get Matched to the Right Talent
             </p>
@@ -353,14 +355,14 @@ function BentoSection() {
         </motion.div>
 
         <motion.div 
-          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
+          className="group flex flex-col rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">3</p>
-          <div className="mt-8">
+          <div className="mt-8 flex-1">
             <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
               Meet Before You Commit
             </p>
@@ -371,14 +373,14 @@ function BentoSection() {
         </motion.div>
 
         <motion.div 
-          className="group flex flex-col justify-between rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
+          className="group flex flex-col rounded-3xl bg-gray-50 p-8 transition-all duration-500 ease-out hover:scale-110 hover:shadow-2xl hover:bg-gray-900 cursor-pointer ring-1 ring-gray-900/5"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <p className="flex-none text-3xl font-bold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">4</p>
-          <div className="mt-8">
+          <div className="mt-8 flex-1">
             <p className="text-lg font-semibold tracking-tight text-gray-900 group-hover:text-white transition-colors duration-500">
               Engagement Launch
             </p>
@@ -582,7 +584,7 @@ export default function Home() {
         </div>
         <DarkBentoSection />
       </main>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   )
