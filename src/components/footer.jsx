@@ -19,7 +19,7 @@ function CallToAction() {
         Get CPA-vetted accounting talent — fast, reliable, and affordable. Get started and see why firms choose Glide.
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#">
+        <Button className="w-full sm:w-auto" href="https://app.try-glide.com/customer-onboarding">
           Get started
         </Button>
       </div>
@@ -72,7 +72,7 @@ function Sitemap() {
           <SitemapLink href="/talent-terms">Talent Terms</SitemapLink>
           <SitemapLink href="/client-terms">Client Terms</SitemapLink>
           <SitemapLink href="/privacy">Privacy Policy</SitemapLink>
-          <SitemapLink href="mailto:rohan@try-glide.com">Support</SitemapLink>
+          <SitemapLink href="mailto:team@try-glide.com">Support</SitemapLink>
         </SitemapLinks>
       </div>
     </>
@@ -110,14 +110,6 @@ function SocialIconLinkedIn(props) {
 function SocialLinks() {
   return (
     <>
-      <Link
-        href="https://x.com"
-        target="_blank"
-        aria-label="Visit us on X"
-        className="text-gray-950 data-hover:text-gray-950/75"
-      >
-        <SocialIconX className="size-4" />
-      </Link>
       <Link
         href="https://www.linkedin.com/company/glideglobalinc/"
         target="_blank"

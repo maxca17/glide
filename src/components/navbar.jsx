@@ -12,11 +12,11 @@ import { Logo } from './logo'
 import { PlusGrid, PlusGridItem, PlusGridRow } from './plus-grid'
 
 const links = [
-  { href: '#how-it-works', label: 'How it Works' },
-  { href: '#services', label: 'Services' },
-  { href: '/company', label: 'Company' },
-  { href: 'https://app.try-glide.com/talent-intake', label: 'Apply as Talent' },
   { href: 'https://app.try-glide.com/customer-onboarding', label: 'Get Talent Now' },
+  { href: '#services', label: 'Use Cases' },
+  { href: '#how-it-works', label: 'How it Works' },
+  { href: '/company', label: 'About Us' },
+  { href: 'https://app.try-glide.com/talent-intake', label: 'Apply as Talent' },
   { href: 'https://app.try-glide.com/login', label: 'Login' },
 ]
 

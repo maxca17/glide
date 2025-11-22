@@ -454,7 +454,7 @@ function DarkBentoSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                 </svg>
                 <h3 className="text-lg font-semibold text-white">
-                  Speed Without the Stress
+                  Speed Without Stress
                 </h3>
               </div>
               <p className="mt-4 flex-1 text-sm leading-6 text-gray-300">
