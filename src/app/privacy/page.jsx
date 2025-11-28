@@ -12,7 +12,7 @@ export default function PrivacyPage() {
           </Heading>
           <div className="prose prose-lg max-w-none text-gray-700">
             <p className="text-sm text-gray-500 mb-8">
-              <strong>Effective Date:</strong> [Insert Date]
+              <strong>Effective Date:</strong> November 28, 2025
             </p>
             <p className="mb-8">
               Glide Global Inc. ("Glide," "we," "our," or "us") provides a platform that connects accounting and finance talent with firms seeking fractional or project-based support ("Platform"). This Privacy Policy explains how we collect, use, and protect information from users of our website (glideglobal.co) and Platform (app.try-glide.com) (together, the "Services").
@@ -110,7 +110,7 @@ export default function PrivacyPage() {
               <li>Data portability</li>
               <li>Withdraw consent</li>
             </ul>
-            <p className="mb-6">To exercise these rights, contact us at <a href="mailto:privacy@glideglobal.co" className="text-blue-600 hover:text-blue-800">privacy@glideglobal.co</a>.</p>
+            <p className="mb-6">To exercise these rights, contact us at <a href="mailto:support@try-glide.com" className="text-blue-600 hover:text-blue-800">support@try-glide.com</a>.</p>
 
             <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">8. International Data Transfers</h2>
             <p className="mb-6">
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
             <p className="mb-4">If you have questions or concerns about this Privacy Policy, please contact us:</p>
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="font-semibold text-gray-900 mb-2">Glide Global Inc.</p>
-              <p className="mb-2">Email: <a href="mailto:privacy@try-glide.com" className="text-blue-600 hover:text-blue-800">privacy@try-glide.com</a></p>
+              <p className="mb-2">Email: <a href="mailto:team@try-glide.com" className="text-blue-600 hover:text-blue-800">team@try-glide.com</a></p>
               <p>Address: 441 Lexington Avenue, New York, NY 10007</p>
             </div>
           </div>
