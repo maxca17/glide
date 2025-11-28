@@ -7,13 +7,9 @@ export async function GET(req) {
   let siteUrl = new URL(req.url).origin
 
   let feed = new Feed({
-    title: 'The Radiant Blog',
+    title: 'Glide Outsourced Accounting ',
     description:
-      'Stay informed with product updates, company news, and insights on how to sell smarter at your company.',
-    author: {
-      name: 'Michael Foster',
-      email: 'michael.foster@example.com',
-    },
+      'Glide Outsourced Accounting',
     id: siteUrl,
     link: siteUrl,
     image: `${siteUrl}/favicon.ico`,

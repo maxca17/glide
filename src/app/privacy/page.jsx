@@ -15,7 +15,7 @@ export default function PrivacyPage() {
               <strong>Effective Date:</strong> November 28, 2025
             </p>
             <p className="mb-8">
-              Glide Global Inc. ("Glide," "we," "our," or "us") provides a platform that connects accounting and finance talent with firms seeking fractional or project-based support ("Platform"). This Privacy Policy explains how we collect, use, and protect information from users of our website (glideglobal.co) and Platform (app.try-glide.com) (together, the "Services").
+              Glide Global Inc. ("Glide," "we," "our," or "us") provides a platform that connects accounting and finance talent with firms seeking fractional or project-based support ("Platform"). This Privacy Policy explains how we collect, use, and protect information from users of our website (try-glide.com) and Platform (app.try-glide.com) (together, the "Services").
             </p>
             <p className="mb-8">
               By using our Services, you agree to this Privacy Policy. If you do not agree, please discontinue use of our Services.
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
               <li>Provide, maintain, and improve our Services</li>
               <li>Facilitate communication between Clients and Talent</li>
               <li>Process payments and invoices</li>
-              <li>Send transactional emails and updates (via SendGrid)</li>
+              <li>Send transactional emails and updates</li>
               <li>Verify identity and prevent fraud</li>
               <li>Comply with legal obligations</li>
               <li>Analyze usage trends and improve user experience</li>
@@ -61,7 +61,6 @@ export default function PrivacyPage() {
               <li><strong>With Service Providers:</strong> We use trusted third parties to operate our Services, such as:
                 <ul className="list-disc pl-6 mt-2 space-y-1">
                   <li>Stripe (payment processing)</li>
-                  <li>SendGrid (email delivery)</li>
                   <li>Supabase (database and authentication)</li>
                 </ul>
               </li>
